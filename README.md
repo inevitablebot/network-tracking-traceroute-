@@ -46,5 +46,4 @@ Notes:
 
 - The tool offers flexibility for both casual users who prefer default settings (`a` option) and advanced users who need specific traceroute configurations.
 
-Disclaimer:
-NetRack is a hypothetical tool created for illustrative purposes based on the provided code. If a tool with a similar name or functionality exists, it is recommended to refer to its official documentation for accurate details.
+
