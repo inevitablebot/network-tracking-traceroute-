@@ -56,7 +56,7 @@ int main() {
         return 0;
     } else {
         cout<<"enter any key to exit ...";
-       -getch();
+       _getch();
         return 1;
     }
 }
