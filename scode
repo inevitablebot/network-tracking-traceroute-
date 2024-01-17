@@ -1,0 +1,62 @@
+#include <cstdlib>
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main() {
+    string ip;
+    string option;
+    string count;
+    int ipcount;
+    string destip;
+    string jip;
+
+    cout<<"enter ip to scan : ";
+    cin>>ip;
+    cout<<"\noptions are \n a -> Default \n -d Do not resolve addresses to hostnames \n -h ->Maximum number of hops to search for target \n -j -> Loose source route along host-list (IPv4-only)\n  -4 -> Force using IPv4 \n  -6 ->Force using IPv6. \n ";
+    cout<<"\nsellect option ";
+    cin>>option;
+    string command;
+    if(option=="-h") {
+    cout<<"enter max_hops count : ";
+    cin>>count;
+    string command="tracert "+option+" "+count+" "+ip;
+    int result = system(command.c_str());
+    }
+    else if (option=="-j")
+    {
+        cout<<"\n \n it may give you misleading output \n\n ";
+      cout<<"enter no fo ip you want to scan : ";
+        cin>>ipcount;
+        for(int i=1;i<=ipcount;++i){
+        cout<<"next ip  ";
+        cin>>jip;
+    }
+        cout<<"destination ip ";
+        cin>>destip;
+        string command ="tracert "+option+" "+jip+" "+destip;
+        int result = system(command.c_str());
+    }
+    else if (option=="a")
+    {
+       command ="tracert  "+ip;
+    }
+    
+    else {
+
+    string command ="tracert "+option+" "+ip;
+ 
+    }
+     int result = system(command.c_str());
+
+   
+    if (result == 0) {
+       cout<<"enter any key to exit ...";
+       _getch();
+        return 0;
+    } else {
+        cout<<"enter any key to exit ...";
+       -getch();
+        return 1;
+    }
+}
